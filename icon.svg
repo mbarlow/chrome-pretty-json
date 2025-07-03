@@ -1,0 +1,45 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="bracketGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="56" fill="url(#bgGradient)" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- JSON brackets -->
+  <g fill="url(#bracketGradient)" font-family="monospace" font-weight="bold">
+    <!-- Left brace -->
+    <path d="M 32 35 C 28 35, 25 38, 25 42 L 25 55 C 25 58, 22 61, 19 61 C 22 61, 25 64, 25 67 L 25 80 C 25 84, 28 87, 32 87"
+          stroke="url(#bracketGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <!-- Right brace -->
+    <path d="M 96 35 C 100 35, 103 38, 103 42 L 103 55 C 103 58, 106 61, 109 61 C 106 61, 103 64, 103 67 L 103 80 C 103 84, 100 87, 96 87"
+          stroke="url(#bracketGradient)" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- JSON content indicators -->
+  <g fill="url(#bracketGradient)" opacity="0.8">
+    <!-- Key-value pairs representation -->
+    <circle cx="45" cy="50" r="2.5"/>
+    <rect x="50" y="48" width="20" height="4" rx="2"/>
+    <circle cx="75" cy="50" r="2.5"/>
+
+    <circle cx="45" cy="61" r="2.5"/>
+    <rect x="50" y="59" width="15" height="4" rx="2"/>
+    <circle cx="70" cy="61" r="2.5"/>
+
+    <circle cx="45" cy="72" r="2.5"/>
+    <rect x="50" y="70" width="25" height="4" rx="2"/>
+    <circle cx="80" cy="72" r="2.5"/>
+  </g>
+
+  <!-- Subtle highlight -->
+  <circle cx="64" cy="64" r="56" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+</svg>

@@ -1,0 +1,112 @@
+/* CSS styles for JSON pretty printing */
+:root {
+  --json-background: #282828;
+  --json-foreground: #ebdbb2;
+  --json-string: #b8bb26;
+  --json-number: #d3869b;
+  --json-boolean: #fe8019;
+  --json-null: #928374;
+  --json-key: #83a598;
+  --json-punctuation: #a89984;
+  --json-lineNumbers: #665c54;
+  --json-selection: #3c3836;
+}
+
+.json-pretty-container {
+  margin: 0;
+  padding: 0;
+  background-color: var(--json-background);
+  color: var(--json-foreground);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: auto;
+}
+
+.json-content {
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.line-numbers {
+  background-color: var(--json-background);
+  color: var(--json-lineNumbers);
+  padding: 20px 10px 20px 20px;
+  text-align: right;
+  user-select: none;
+  min-width: 40px;
+  border-right: 1px solid var(--json-lineNumbers);
+}
+
+.line-numbers div {
+  line-height: 1.4;
+}
+
+.json-code {
+  flex: 1;
+  padding: 20px;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.code-line {
+  line-height: 1.4;
+  margin: 0;
+}
+
+.json-key {
+  color: var(--json-key);
+  font-weight: normal;
+}
+
+.json-string {
+  color: var(--json-string);
+}
+
+.json-number {
+  color: var(--json-number);
+}
+
+.json-boolean {
+  color: var(--json-boolean);
+  font-weight: bold;
+}
+
+.json-null {
+  color: var(--json-null);
+  font-style: italic;
+}
+
+.json-punctuation {
+  color: var(--json-punctuation);
+}
+
+/* Selection highlighting */
+::selection {
+  background-color: var(--json-selection);
+}
+
+::-moz-selection {
+  background-color: var(--json-selection);
+}
+
+/* Scrollbar styling for dark themes */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--json-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--json-lineNumbers);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--json-foreground);
+}
