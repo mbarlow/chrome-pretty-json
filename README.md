@@ -2,14 +2,6 @@
 
 A minimal Chrome extension that automatically pretty-prints JSON responses with customizable theming. No data is sent to third parties - everything runs locally in your browser.
 
-## Features
-
-- 🎨 **Multiple built-in themes**: Gruvbox Dark, Catppuccin Dark, GitHub, VS Code Dark, and more
-- 🚀 **Automatic detection**: Instantly formats JSON responses without manual intervention
-- 🔒 **Privacy-focused**: All processing happens locally, no external requests
-- ⚡ **Lightweight**: Minimal code footprint for fast performance
-- 🎯 **Zero configuration**: Works out of the box with sensible defaults
-
 ## Supported Themes
 
 - **Gruvbox Dark** - Retro groove color scheme
@@ -43,30 +35,6 @@ Since this extension prioritizes privacy and local execution, install it manuall
 2. The extension automatically detects and formats the JSON
 3. Click the extension icon to change themes
 4. Your theme preference is saved locally
-
-## Development
-
-The extension consists of minimal, essential files:
-- `manifest.json` - Extension configuration
-- `content.js` - JSON detection and formatting logic
-- `popup.html/js` - Theme selection interface
-- `themes.js` - Color scheme definitions
-- `icon.svg` - Extension icon (convert to PNG with ImageMagick)
-
-## Generate Icons
-
-Convert the SVG icon to required sizes:
-
-```bash
-# Install ImageMagick if needed
-sudo apt-get install imagemagick  # Ubuntu/Debian
-brew install imagemagick          # macOS
-
-# Generate icon sizes
-convert icon.svg -resize 16x16 icon16.png
-convert icon.svg -resize 48x48 icon48.png
-convert icon.svg -resize 128x128 icon128.png
-```
 
 ## Privacy
 
