@@ -2,6 +2,10 @@
 
 A minimal Chrome extension that automatically pretty-prints JSON responses with customizable theming. No data is sent to third parties - everything runs locally in your browser.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4acca3c8-47c5-4603-8834-c26c420a990b" width="600" />
+</p>
+
 ## Supported Themes
 
 - **Gruvbox Dark** - Retro groove color scheme
