@@ -1,14 +1,23 @@
 {
   "manifest_version": 3,
   "name": "Chrome Pretty JSON",
-  "version": "1.0.0",
+  "version": "0.0.3",
   "description": "Automatically pretty-print JSON responses with customizable themes",
-  "permissions": ["storage"],
+  "permissions": [
+    "storage"
+  ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["scripts/themes.js", "content.js"],
-      "css": ["styles/content.css"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/themes.js",
+        "content.js"
+      ],
+      "css": [
+        "styles/content.css"
+      ],
       "run_at": "document_end"
     }
   ],
