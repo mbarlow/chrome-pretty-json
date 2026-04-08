@@ -2,6 +2,9 @@
 
 Automatically formats and syntax-highlights JSON responses in Chrome.
 
+<img width="828" height="462" alt="image" src="https://github.com/user-attachments/assets/ce30e548-df2c-4aef-aab8-ef283633f9a0" />
+
+
 ## Features
 
 - Detects JSON pages and formats them with syntax highlighting
