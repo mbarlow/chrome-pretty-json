@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      width: 280px;
+      padding: 16px;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13px;
+      background: #FFFFFF;
+      color: #111;
+    }
+
+    .header {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .header h1 {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .theme-card {
+      padding: 10px;
+      border: 2px solid #E5E7EB;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #F9FAFB;
+      transition: border-color 0.15s ease, opacity 0.15s ease;
+    }
+
+    .theme-card:hover {
+      border-color: #C0C4CC;
+      opacity: 0.85;
+    }
+
+    .theme-card.selected {
+      border-color: #3B82F6;
+    }
+
+    .theme-name {
+      font-size: 11px;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .theme-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .theme-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9CA3AF;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .status.visible {
+      opacity: 1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #1A1A1A;
+        color: #E5E5E5;
+      }
+
+      .header {
+        border-bottom-color: #333;
+      }
+
+      .theme-card {
+        border-color: #333;
+        background: #252525;
+      }
+
+      .theme-card:hover {
+        border-color: #555;
+      }
+
+      .theme-card.selected {
+        border-color: #3B82F6;
+      }
+
+      .status {
+        color: #666;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Chrome Pretty JSON</h1>
+  </div>
+  <div class="theme-grid" id="themeGrid"></div>
+  <div class="status" id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
