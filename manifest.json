@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Chrome Pretty JSON",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Automatically pretty-print JSON responses with customizable themes",
   "permissions": [
     "storage"
