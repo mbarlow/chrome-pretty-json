@@ -89,12 +89,43 @@
       container.appendChild(codeBlock);
       body.appendChild(container);
 
+      // Add copy-to-clipboard button
+      addCopyButton(prettyJson);
+
       // Apply theme
       applyTheme(currentTheme);
 
     } catch (e) {
       console.error('Failed to parse JSON:', e);
     }
+  }
+
+  function addCopyButton(jsonText) {
+    const COPY_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+    const CHECK_ICON = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+
+    const button = document.createElement('button');
+    button.className = 'json-copy-button';
+    button.title = 'Copy JSON';
+    button.setAttribute('aria-label', 'Copy JSON to clipboard');
+    button.innerHTML = COPY_ICON;
+
+    let resetTimer = null;
+    button.addEventListener('click', function() {
+      navigator.clipboard.writeText(jsonText).then(function() {
+        button.innerHTML = CHECK_ICON;
+        button.classList.add('copied');
+        clearTimeout(resetTimer);
+        resetTimer = setTimeout(function() {
+          button.innerHTML = COPY_ICON;
+          button.classList.remove('copied');
+        }, 1500);
+      }).catch(function(e) {
+        console.error('Failed to copy JSON:', e);
+      });
+    });
+
+    document.body.appendChild(button);
   }
 
   function highlightJson(line) {

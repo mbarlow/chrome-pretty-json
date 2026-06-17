@@ -83,6 +83,36 @@
   color: var(--json-punctuation);
 }
 
+/* Copy-to-clipboard button */
+.json-copy-button {
+  position: fixed;
+  top: 12px;
+  right: 16px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: var(--json-foreground);
+  background-color: var(--json-selection);
+  border: 1px solid var(--json-lineNumbers);
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.json-copy-button:hover {
+  opacity: 1;
+}
+
+.json-copy-button.copied {
+  color: var(--json-string);
+  opacity: 1;
+}
+
 /* Selection highlighting */
 ::selection {
   background-color: var(--json-selection);
